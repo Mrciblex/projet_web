@@ -1,65 +1,66 @@
-#toute_les_boutiques{
+/* Chargement de la police Albert Sans */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
+
+
+/* Conteneur principal pour toutes les boutiques */
+#toute_les_boutiques {
     margin: 0px;
     padding: 0px;
     gap: 0px;
     overflow: hidden;
-    
-
 }
 
-.image_dynamique_boutique{
-
+/* Section avec une image de fond dynamique */
+.image_dynamique_boutique {
     height: 1080px;
     width: 100%;
-    background-image: url('ress/photo_nuit.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
+    background-image: url('ress/photo_nuit.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre tout l'espace disponible */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* Effet de parallaxe */
     padding-top: 13%;
     position: relative;
     z-index: 2;
-    
-
-
 }
 
-
-
+/* Conteneur pour le titre de la section */
 .titre_slide {
     display: grid;
     grid-template-columns: 50% 46%;
     grid-template-rows: 80%;
-
-    
-
 }
 
-#invisible{
+/* Élément invisible utilisé pour l'espacement ou la mise en page */
+#invisible {
     opacity: 0;
 }
+
+/* Titre principal des boutiques */
 #boutique_h1 {
     color: #FFFFFF;
     font-size: 70px;
     justify-content: right;
     text-align: center;
     font-family: 'Albert Sans';
-     
 }
 
+/* Partie du titre avec bordure blanche */
 #boutique_span_particulier {
     color: transparent;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px white; /* Bordure blanche du texte */
     font-family: 'Albert Sans';
-    display: inline-block; 
-    text-align: left; 
+    display: inline-block;
+    text-align: left;
 }
 
+/* Conteneur pour le bouton "Toutes les boutiques" */
 .bouton_toutes_les_boutiques {
-    display: flex; 
-    justify-content: space-evenly; 
-    align-items: end; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
 }
 
+/* Style du bouton "Toutes les boutiques" */
 #boutique_bouton {
     padding-top: 1%;
     padding-bottom: 1%;
@@ -71,28 +72,26 @@
     border-radius: 10px;
 }
 
-
-
-
-.toutes_les_boutiques{
+/* Conteneur principal des boutiques */
+.toutes_les_boutiques {
     justify-content: center;
     place-items: center;
     padding-top: 2%;
 }
+
+/* Chargement de la police Albert Sans */
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
 
-.boutique{
+/* Grille pour les catégories de boutiques */
+.boutique {
     display: grid;
     grid-template-columns: 211px 211px 211px 211px 211px;
     grid-template-rows: 211px;
     gap: 56px;
-
 }
 
-.maison,.restauration,.mode_bijoux,.beaute_sante,.culture_loisirs{
-    
-    
-  
+/* Style pour les catégories spécifiques */
+.maison, .restauration, .mode_bijoux, .beaute_sante, .culture_loisirs {
     text-align: center;
     justify-content: center;
     padding-top: 10%;
@@ -101,78 +100,80 @@
     border: 5px solid #FFFFFF;
     border-radius: 18px;
     opacity: 1;
-    transition: margin-top 0.5s ease; 
-    
+    transition: margin-top 0.5s ease;
 }
 
-.maison:hover,.restauration:hover,.mode_bijoux:hover,.beaute_sante:hover,.culture_loisirs:hover {
-    background-color:#EC1C24;
-    transform: translateY(-12px);  
+/* Effet de survol pour les catégories */
+.maison:hover, .restauration:hover, .mode_bijoux:hover, .beaute_sante:hover, .culture_loisirs:hover {
+    background-color: #EC1C24; /* Change la couleur de fond */
+    transform: translateY(-12px); /* Déplace l'élément vers le haut */
 }
-.text_boutique{
+
+/* Texte dans chaque catégorie */
+.text_boutique {
     font: normal normal bold 22px 'Albert Sans';
     letter-spacing: 0px;
     color: #FFFFFF;
-   
 }
+
+/* Images dans les catégories */
 .boutique img {
     width: 100px;
     height: 100px;
 }
-.texte_boutique_paragraphe{
+
+/* Texte sous les boutiques */
+.texte_boutique_paragraphe {
     justify-content: center;
     text-align: center;
     font-size: 30px;
-    font-family:'Albert Sans' ;
+    font-family: 'Albert Sans';
     color: #FFFFFF;
     font-weight: lighter;
     margin-top: 5%;
 }
-#texte_boutique_en_gras{
+
+/* Texte en gras sous les boutiques */
+#texte_boutique_en_gras {
     font-weight: bold;
 }
 
+/* Section jaune contenant les informations */
 .boutique_partie_jaune {
     width: 1392px;
     height: 398px;
     background-color: #F8DF00;
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    z-index: 3; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
     margin-top: 34%;
     border-radius: 15px;
     display: grid;
     grid-template-rows: 15% 30% 25% 20%;
-   
-
 }
 
-
-
-
-.reseau{
-    font:  bold 58px 'Albert Sans';
+/* Titre des réseaux sociaux */
+.reseau {
+    font: bold 58px 'Albert Sans';
     color: white;
     -webkit-text-stroke: 3px black;
     margin-left: 15%;
-   
-    
-   
-
 }
-.colone_de_droite_reseau{
+
+/* Colonne pour afficher les réseaux sociaux */
+.colone_de_droite_reseau {
     position: absolute;
     z-index: 4;
     height: 100%;
     display: grid;
     place-items: baseline;
-   
     transform: translateY(-9%);
-   
 }
-.info_bon_plan_titre{
+
+/* Titre pour le formulaire "Bon Plan" */
+.info_bon_plan_titre {
     text-align: center;
     font-size: 50px;
     display: flex;
@@ -180,20 +181,24 @@
     font-family: 'Albert Sans';
     font-weight: 900;
     justify-content: center;
-    place-items: center  ;
-
+    place-items: center;
 }
-.info_bon_plan_email{
+
+/* Section pour le formulaire "Bon Plan" */
+.info_bon_plan_email {
     display: grid;
     place-items: center;
 }
-.info_bon_plan_text{
+
+/* Texte explicatif sous le titre "Bon Plan" */
+.info_bon_plan_text {
     text-align: center;
     font-size: 18px;
     font-family: 'Albert Sans';
 }
- .form_email{
-   
+
+/* Conteneur pour le champ email */
+.form_email {
     width: 487px;
     height: 60px;
     background-color: #F8DF00;
@@ -203,45 +208,42 @@
     grid-template-columns: 50% 80%;
     place-items: center;
 }
-#email{
+
+/* Champ d'entrée pour l'email */
+#email {
     width: 150%;
-    height: auto;
     background-color: #F8DF00;
-   
     font-size: 20px;
     color: #000000;
     border-color: transparent;
     margin-left: 3%;
     font-family: 'Albert Sans';
-    
     outline: none;
     text-align: left;
-
-
 }
 
-
-
-#fleche_noir_email_envoyer{
+/* Flèche pour envoyer l'email */
+#fleche_noir_email_envoyer {
     width: 24px;
     height: 23px;
-    transition: margin-left 0.2s ease; 
-
+    transition: margin-left 0.2s ease;
 }
-#fleche_noir_email_envoyer:hover{
 
+#fleche_noir_email_envoyer:hover {
     margin-left: 30%;
-    
-} 
+}
 
+/* Section rouge sous les boutiques */
 .boutique_partie_rouge {
     width: 100%;
     height: 566px;
-    background-color: #EC1C24;  
+    background-color: #EC1C24;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     place-items: end;
 }
+
+/* Conteneur pour le slider */
 .slider-container {
     width: 100%;
     height: 300px;
@@ -249,23 +251,23 @@
     position: relative;
 }
 
+
 .slider-wrapper {
     display: flex;
     width: max-content;
     animation: defilement 12s linear infinite;
-  
 }
 
+/* Images dans le slider */
 .slide img {
     width: 211px;
     height: 211px;
     object-fit: cover;
     margin-right: 26px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
+/* Animation de défilement pour le slider */
 @keyframes defilement {
     from {
         transform: translateX(0);
@@ -275,12 +277,13 @@
     }
 }
 
+/* Effet de survol pour les images du slider */
 .slide img:hover {
     border: #F8DF00 solid 10px;
-
 }
 
 
+/*Responsive de 1920px jusqu'en 320px*/
   @media screen and (min-width: 1920px) {
     .image_dynamique_boutique {
         height: 1080px;
