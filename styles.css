@@ -9,7 +9,17 @@ body {
 
 .logo-text {
     font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 600;
+    font-size: 40px
+}
+.logo-name{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 16px
+}
+.logo-name2{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px
 }
 
 .nom-logo,
@@ -37,6 +47,7 @@ footer {
 .left-section, .center-section, .right-section {
     flex: 1;
     margin: 20px;
+    line-height: 1.4; 
 }
 
 
@@ -121,7 +132,7 @@ footer {
 }
 
 .email-container button {
-    padding: 10px 20px;
+    padding: 20px 20px;
     border: none;
     background-color: #000;
     color: #fff;
@@ -166,4 +177,9 @@ footer {
 }
 .mail-icon{
     margin-right: 15px;
+}
+#email2{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 16px
 }
