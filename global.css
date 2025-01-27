@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "Helvetica-neue";
+    src: url(assets/fonts/helvetica-neue/HelveticaNeueMedium.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Albert-sans";
+    src: url(assets/fonts/albert-sans/AlbertSans-VariableFont_wght.ttf);
+}
+
+:root{
+    --dark: black;
+    --clear: white;
+    --important: #F8DF00;
+    --main-background: #EC1C24;
+}
+
+
+
+/* --------------------------- NAV BAR --------------------------- */
+.nav{
+    width: 100%;
+    height: 9em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clear);
+    position: fixed;
+    z-index: 10;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.main-nav{
+    display: flex;
+    flex-direction: row;
+    height: 7em;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 2em;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+#logo-nav{
+    font-family: "Helvetica-neue";
+    font-weight: normal;
+    font-size: 68px;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.left-nav{
+    width: 50em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Albert-sans";
+    font-weight: normal;
+}
+
+.link-nav{
+    text-decoration: none;
+    color: var(--dark);
+    height: 2em;
+    align-content: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.link-nav:hover{
+    background-color: rgb(235, 235, 235);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+#right-nav{
+    display: flex;
+    align-items: center;
+    width: 16em;
+    justify-content: space-between;
+}
+
+#right-nav svg{
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+#right-nav svg:hover{
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+#horaire-container{
+    background-color: var(--important);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12em;
+    height: 3.5em;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+    border-radius: 17px;
+    font-family: "Albert-sans";
+    font-weight: normal;
+}
+
+#horaire-container p span{
+    font-weight: bold;
+}
+
+#nav-menu-button{
+    display: none;
+}
+
+#exit_nav{
+    display: none;
+}
+
+#annonce-nav{
+    width: 100%;
+    height: 2.5em;
+    font-family: "Albert-sans";
+    font-weight: normal;
+    text-align: center;
+    align-content: center;
+    background-color: var(--dark);
+    color: var(--clear);
+}
+
+/* --------------------------- --------------------------- */
