@@ -15,6 +15,7 @@ body{
 }
 
 #socials{
+    z-index: 10;
     opacity: 0.7;
     top: 35%;
     left: 2%;
@@ -369,8 +370,7 @@ div.img-slider-top{
 
 #slider-mid-container{
     width: max-content;
-    margin-top: 1em;
-    height: 40em;
+    height: 45em;
     display: flex;
     gap: 4em;
     justify-content: center;
@@ -464,93 +464,1186 @@ div.img-slider-top{
 
 
 
-/* --------------------------- RESPONSIVE --------------------------- */
+/* ---------------------------------- PAGE 3 ------------------------------------- */
+/* Conteneur principal pour toutes les boutiques */
+#toute_les_boutiques {
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
+    overflow: hidden;
+}
+
+/* Section avec une image de fond dynamique */
+.image_dynamique_boutique {
+    height: 1080px;
+    width: 100%;
+    background-image: url('/assets/images/illustrations/photo_nuit.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre tout l'espace disponible */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* Effet de parallaxe */
+    padding-top: 13%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Conteneur pour le titre de la section */
+.titre_slide {
+    display: grid;
+    grid-template-columns: 50% 46%;
+    grid-template-rows: 80%;
+}
+
+/* Élément invisible utilisé pour l'espacement ou la mise en page */
+#invisible {
+    opacity: 0;
+}
+
+/* Titre principal des boutiques */
+#boutique_h1 {
+    color: #FFFFFF;
+    font-size: 70px;
+    justify-content: right;
+    text-align: center;
+    font-family: 'Albert-sans';
+}
+
+/* Partie du titre avec bordure blanche */
+#boutique_span_particulier {
+    color: transparent;
+    -webkit-text-stroke: 1px white; /* Bordure blanche du texte */
+    font-family: 'Albert-sans';
+    display: inline-block;
+    text-align: left;
+}
+
+/* Conteneur pour le bouton "Toutes les boutiques" */
+.bouton_toutes_les_boutiques {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+/* Style du bouton "Toutes les boutiques" */
+#boutique_bouton {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    color: #E82723;
+    border-radius: 10px;
+}
+
+/* Conteneur principal des boutiques */
+.toutes_les_boutiques {
+    justify-content: center;
+    place-items: center;
+    padding-top: 2%;
+}
+
+/* Grille pour les catégories de boutiques */
+.boutique {
+    display: grid;
+    grid-template-columns: 211px 211px 211px 211px 211px;
+    grid-template-rows: 211px;
+    gap: 56px;
+}
+
+/* Style pour les catégories spécifiques */
+.maison, .restauration, .mode_bijoux, .beaute_sante, .culture_loisirs {
+    text-align: center;
+    justify-content: center;
+    padding-top: 10%;
+    display: grid;
+    gap: 12%;
+    border: 5px solid #FFFFFF;
+    border-radius: 18px;
+    opacity: 1;
+    transition: margin-top 0.5s ease;
+}
+
+/* Effet de survol pour les catégories */
+.maison:hover, .restauration:hover, .mode_bijoux:hover, .beaute_sante:hover, .culture_loisirs:hover {
+    background-color: #EC1C24; /* Change la couleur de fond */
+    transform: translateY(-12px); /* Déplace l'élément vers le haut */
+}
+
+/* Texte dans chaque catégorie */
+.text_boutique {
+    font: normal normal bold 22px 'Albert-sans';
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+/* Images dans les catégories */
+.boutique img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Texte sous les boutiques */
+.texte_boutique_paragraphe {
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Albert-sans';
+    color: #FFFFFF;
+    font-weight: lighter;
+    margin-top: 5%;
+}
+
+/* Texte en gras sous les boutiques */
+#texte_boutique_en_gras {
+    font-weight: bold;
+}
+
+/* Section jaune contenant les informations */
+.boutique_partie_jaune {
+    width: 1392px;
+    height: 398px;
+    background-color: #F8DF00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    margin-top: 34%;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 15% 30% 25% 20%;
+}
+
+/* Titre des réseaux sociaux */
+.reseau {
+    font: bold 58px 'Albert-sans';
+    color: white;
+    -webkit-text-stroke: 3px black;
+    margin-left: 15%;
+}
+
+/* Colonne pour afficher les réseaux sociaux */
+.colone_de_droite_reseau {
+    position: absolute;
+    z-index: 4;
+    height: 100%;
+    display: grid;
+    place-items: baseline;
+    transform: translateY(-9%);
+}
+
+/* Titre pour le formulaire "Bon Plan" */
+.info_bon_plan_titre {
+    text-align: center;
+    font-size: 50px;
+    display: flex;
+    color: black;
+    font-family: 'Albert-sans';
+    font-weight: 900;
+    justify-content: center;
+    place-items: center;
+}
+
+/* Section pour le formulaire "Bon Plan" */
+.info_bon_plan_email {
+    display: grid;
+    place-items: center;
+}
+
+/* Texte explicatif sous le titre "Bon Plan" */
+.info_bon_plan_text {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Albert-sans';
+}
+
+/* Conteneur pour le champ email */
+.form_email {
+    width: 487px;
+    height: 60px;
+    background-color: #F8DF00;
+    border: 3px solid #000000;
+    border-radius: 90px;
+    display: grid;
+    grid-template-columns: 50% 80%;
+    place-items: center;
+}
+
+/* Champ d'entrée pour l'email */
+#emailp3 {
+    width: 150%;
+    background-color: #F8DF00;
+    font-size: 20px;
+    color: #000000;
+    border-color: transparent;
+    margin-left: 3%;
+    font-family: 'Albert-sans';
+    outline: none;
+    text-align: left;
+}
+
+/* Flèche pour envoyer l'email */
+#fleche_noir_email_envoyer {
+    width: 24px;
+    height: 23px;
+    transition: margin-left 0.2s ease;
+}
+
+#fleche_noir_email_envoyer:hover {
+    margin-left: 30%;
+}
+
+/* Section rouge sous les boutiques */
+.boutique_partie_rouge {
+    width: 100%;
+    height: 566px;
+    background-color: #EC1C24;
+    display: flex;
+    justify-content: center;
+    place-items: end;
+}
+
+/* Conteneur pour le slider */
+.slider-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.slider-wrapper {
+    display: flex;
+    width: max-content;
+    animation: defilement 12s linear infinite;
+}
+
+/* Images dans le slider */
+.slide img {
+    width: 211px;
+    height: 211px;
+    object-fit: cover;
+    margin-right: 26px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation de défilement pour le slider */
+@keyframes defilement {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Effet de survol pour les images du slider */
+.slide img:hover {
+    border: #F8DF00 solid 10px;
+}
+
+
+/*Responsive de 1920px jusqu'en 320px*/
+  @media screen and (min-width: 1920px) {
+    .image_dynamique_boutique {
+        height: 1080px;
+        padding-top: 13%;
+    }
+    #boutique_h1 {
+        font-size: 75px;
+    }
+    .text_boutique {
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width: 1920px) {
+    #boutique_h1 {
+        font-size: 60px;
+    }
+    .text_boutique {
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 1450px)  { 
+
+    .boutique_partie_jaune{
+        width: 1000px;
+        height: 398px;
+       
+    }
+   
+    .image_dynamique_boutique {
+    
+        padding-top: 6%;
+    }
+    #boutique_h1 {
+        font-size: 50px;
+    }
+    .text_boutique {
+        font-size: 18px;
+    }
+    .reseau{
+        font-size: 50px;
+    }
+
+
+}
+
+@media screen and (max-width: 1300px) { 
+
+.boutique{
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px 180px;
+    grid-template-rows: 211px;
+    gap: 35px;
+
+}
+
+.image_dynamique_boutique {
+
+    padding-top: 5%;
+}
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 1075px)  { 
+    .boutique_partie_jaune{
+        width: 800px;
+        height: 300px;
+   
+    }
+    #boutique_h1 {
+        font-size: 40px;
+    }
+    
+    .image_dynamique_boutique {
+    
+        padding-top: 4%;
+    }
+   
+    .texte_boutique_paragraphe{
+        font-size: 25px;
+        
+    }
+    .boutique {
+        display: grid;
+        grid-template-columns: repeat(3, 180px); 
+        grid-template-rows: repeat(2, 180px); 
+        gap: 35px; 
+        justify-content: center; 
+        padding: 0;
+    }
+    
+    .beaute_sante {
+        grid-column: 1 / span 2; 
+        grid-row: 2; 
+        justify-self: center; 
+        width: 180px;
+        padding-top: 5%;
+    }
+    
+    .culture_loisirs {
+        grid-column: 2 / span 2; 
+        grid-row: 2; 
+        justify-self: center;
+        width: 180px;
+        padding-top: 5%;
+       
+        
+    }
+   .colone_de_droite_reseau{
+    height: 110%;
+   }
+   .info_bon_plan_titre{
+    font-size: 40px;
+   }
+   .form_email{
+    height: 40px;
+   }
+    
+    }
+    @media screen and (max-width: 885px)  { 
+        .slide img{
+            width: 180px;
+            height: 180px;
+            margin-right: 20px;
+        }
+        .boutique_partie_jaune{
+            width: 700px;
+            height: 300px;
+           
+        }
+        .info_bon_plan_text{
+            font-size: 13px;
+        }
+    }
+    @media screen and (max-width: 745px)  { 
+        .boutique_partie_jaune{
+            width: 600px;
+            height: 300px;
+           
+        }
+        .texte_boutique_paragraphe{
+            font-size: 20px;
+        }
+    }
+    @media screen and (max-width: 650px)  { 
+      
+        .image_dynamique_boutique {
+    
+            padding-top: 3%;
+        }
+        .boutique_partie_jaune{
+            width: 500px;
+            height: 300px;
+           
+        }
+        .colone_de_droite_reseau{
+            height: 90%;
+            
+           }
+
+        
+        .info_bon_plan_titre{
+        font-size: 40px;
+        }
+        .form_email{
+         width:387px;
+         }
+         .texte_boutique_paragraphe{
+            font-size: 22px;
+            margin-top: 10%;
+            
+        }
+        .reseau{
+            font-size: 40px;
+        }
+        .info_bon_plan_text{
+            font-size: 10px;
+        }
+        .boutique {
+            display: grid;
+            grid-template-columns: repeat(3, 150px); 
+            grid-template-rows: repeat(2, 150px); 
+            gap: 28px; 
+            justify-content: center; 
+            padding: 0;
+            
+        }
+        
+        .beaute_sante {
+            grid-column: 1 / span 2; 
+            grid-row: 2; 
+            justify-self: center; 
+            width: 150px;
+            padding-top: 5%;
+        }
+        
+        .culture_loisirs {
+            grid-column: 2 / span 2; 
+            grid-row: 2; 
+            justify-self: center;
+            width: 150px;
+            padding-top: 5%;
+           
+            
+        }
+        .text_boutique{
+            font-size: 15px;
+        }
+        .boutique img{
+            height: 80px;
+            width: 80px;
+        }
+        #email{
+            margin-left: 5%;
+        }
+    }
+    @media screen and (max-width: 550px)  { 
+        .boutique_partie_jaune{
+            width: 400px;
+            height: 250px;
+        }
+        .info_bon_plan_titre{
+            font-size: 30px;
+            }
+        .boutique_partie_jaune {
+        grid-template-rows: 10% 30% 25% 25%;
+        }     
+        .info_bon_plan_text{
+            font-size: 9px;
+        }
+        .texte_boutique_paragraphe{
+            font-size: 20px;
+            margin-top: 10%;
+            
+        }
+        .colone_de_droite_reseau{
+            height: 105%;
+           }
+           .form_email{
+            width:357px;
+            }
+        .boutique_partie_rouge {
+        height: 500px;
+        }
+        .boutique {
+            display: grid;
+            grid-template-columns: repeat(3, 120px); 
+            grid-template-rows: repeat(2, 120px); 
+            gap: 28px; 
+            justify-content: center; 
+            padding: 0;
+            
+        }
+        
+        .beaute_sante {
+            grid-column: 1 / span 2; 
+            grid-row: 2; 
+            justify-self: center; 
+            width: 120px;
+            padding-top: 5%;
+        }
+        
+        .culture_loisirs {
+            grid-column: 2 / span 2; 
+            grid-row: 2; 
+            justify-self: center;
+            width: 120px;
+            padding-top: 5%;
+        }   
+        .boutique img{
+            height: 50px;
+            width: 50px;
+        }
+        .text_boutique{
+            font-size: 12px;
+        }
+        .texte_boutique_paragraphe{
+            font-size: 20px;
+            margin-top: 30%;
+            
+        }
+        .reseau{
+            font-size: 35px;
+            color: white;
+            -webkit-text-stroke: 2px black
+        }
+        .colone_de_droite_reseau{
+            height: 88%;
+            
+           }
+           #boutique_h1 {
+            font-size: 30px;
+        }
+        
+    }
+
+    @media screen and (max-width: 450px)  {   
+        .boutique_partie_jaune{
+            width: 350px;
+            height: 200px;
+        }
+        .info_bon_plan_titre{
+            font-size: 25px;
+            }
+        .boutique_partie_jaune {
+        grid-template-rows: 8% 30% 25% 27%;
+        }     
+        .info_bon_plan_text{
+            font-size: 7px;
+        }
+        .texte_boutique_paragraphe{
+            font-size: 20px;
+            margin-top: 10%;
+            
+        }
+        .form_email{
+            width:300px;
+            }
+        .colone_de_droite_reseau{
+            height: 127%;
+            }
+
+        .reseau{    
+                color: white;
+                -webkit-text-stroke: 2px black
+            }
+
+            .boutique {
+                display: grid;
+                grid-template-columns: repeat(3, 100px); 
+                grid-template-rows: repeat(2, 100px); 
+                gap: 26px; 
+                justify-content: center; 
+                padding: 0;
+                
+            }
+            
+            .beaute_sante {
+                grid-column: 1 / span 2; 
+                grid-row: 2; 
+                justify-self: center; 
+                width: 100px;
+                padding-top: 5%;
+            }
+            
+            .culture_loisirs {
+                grid-column: 2 / span 2; 
+                grid-row: 2; 
+                justify-self: center;
+                width: 100px;
+                padding-top: 5%;
+            }   
+            .boutique img{
+                height: 30px;
+                width: 30px;
+            }    
+            .texte_boutique_paragraphe{
+                font-size: 20px;
+                margin-top: 50%;
+                
+            }
+            #boutique_bouton {
+        
+                font-size: 16px;
+               
+            }
+            .titre_slide {
+                display: grid;
+                grid-template-rows: 50% 50%;
+                grid-template-columns: auto;
+                text-align: center
+            }
+            #boutique_h1 {
+               
+                justify-content: center;
+                text-align: center;
+             
+                 
+            }
+            .bouton_toutes_les_boutiques {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5%;
+            }
+     @media screen and (max-width: 390px) { 
+    .boutique_partie_jaune {
+        width: 300px;
+        height: 180px;
+        grid-template-rows: 8% 30% 25% 27%;
+    }
+    .info_bon_plan_titre {
+        font-size: 20px;
+    }
+    .info_bon_plan_text {
+        font-size: 7px;
+    }
+   
+    .form_email {
+        width: 250px;
+        height: 35px;
+    }
+    .reseau {
+        font-size: 30px;
+        -webkit-text-stroke: 1.5px black;
+    }
+    #email{
+        margin-left: 8%;
+    }
+    
+    #boutique_bouton {
+        font-size: 14px;
+        padding: 3% 5%;
+    }
+    .boutique {
+        display: grid;
+        grid-template-columns: repeat(2, 100px); 
+        grid-template-rows: 100px 100px 100px; 
+        gap: 26px;
+        justify-content: center; 
+        padding: 0;
+    }
+   
+    
+   
+    
+    .mode_bijoux {
+        grid-column: 1 / span 2; 
+        grid-row: 2; 
+        justify-self: center; 
+        width: 100px;
+        padding-top: 5%;
+    }
+    .maison,.restauration{
+        width: 100px;
+        padding-top: 5%;
+    }
+    
+    .beaute_sante {
+        grid-column: 1; 
+        grid-row: 3;
+        justify-self: center;
+    }
+    
+    .culture_loisirs {
+        grid-column: 2;
+        grid-row: 3; 
+        justify-self: center;
+    }
+    
+}
+      }
+
+      @media screen and (max-width: 390px) { 
+        .boutique_partie_jaune {
+            width: 280px;
+            height: 180px;
+            grid-template-rows: 8% 30% 25% 27%;
+        }
+        .info_bon_plan_titre {
+            font-size: 20px;
+        }
+        .info_bon_plan_text {
+            font-size: 7px;
+        }
+       
+        .form_email {
+            width: 250px;
+            height: 35px;
+        }
+        .reseau {
+            font-size: 30px;
+            -webkit-text-stroke: 1.5px black;
+        }
+        
+        #boutique_bouton {
+            font-size: 14px;
+            padding: 3% 5%;
+        }
+    }
+
+
+
+
+
+    @media screen and (max-width: 1820px)  {   
+        .boutique_partie_jaune{           
+        margin-top: 36%;
+        }
+    }
+    @media screen and (max-width: 1720px)  {   
+        .boutique_partie_jaune{           
+        margin-top: 38%;
+        }
+    }
+    @media screen and (max-width: 1620px)  {   
+        .boutique_partie_jaune{           
+        margin-top: 40%;
+        }
+    }
+    @media screen and (max-width: 1520px)  {   
+        .boutique_partie_jaune{           
+        margin-top: 42.5%;
+        }
+    }
+    @media screen and (max-width: 1450px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 42%;
+            }
+    }
+    @media screen and (max-width: 1320px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 43%;
+            }
+    }
+    @media screen and (max-width: 1220px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 46%;
+            }
+    }
+    @media screen and (max-width: 1170px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 47%;
+            }
+    }
+    @media screen and (max-width: 1120px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 48%;
+            }
+    }
+    @media screen and (max-width: 1080px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 51%;
+            }
+    }
+    @media screen and (max-width: 1020px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 55%;
+            }
+    }
+    @media screen and (max-width: 940px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 60%;
+            }
+    }
+    @media screen and (max-width: 885px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 70%;
+            }
+    }
+    @media screen and (max-width: 795px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 77%;
+            }
+    }
+    @media screen and (max-width: 795px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 77%;
+            }
+    }
+    @media screen and (max-width: 695px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 87%;
+            }
+    
+    }
+    @media screen and (max-width: 610px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 94%;
+            }
+        }
+    @media screen and (max-width: 550px)  {   
+        .boutique_partie_jaune{           
+            margin-top: 102%;
+            }
+        }
+    @media screen and (max-width: 500px)  {   
+        .boutique_partie_jaune{           
+             margin-top: 114%;
+            }
+         }
+     @media screen and (max-width: 450px)  {   
+         .boutique_partie_jaune{           
+             margin-top: 131%;
+             }}
+     @media screen and (max-width: 390px)  {   
+            .boutique_partie_jaune{           
+                    margin-top: 150%;
+                }}             
+
+     @media screen and (max-width: 360px)  {   
+            .boutique_partie_jaune{           
+                     margin-top: 160%;
+                }}             
+
+    @media screen and (max-width: 340px)  {   
+                .boutique_partie_jaune{           
+                        margin-top: 172%;
+                    }}  
+
+/* -------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------- FOOTER ----------------------------------------- */
+.logo-text {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 40px
+}
+.logo-name{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 16px
+}
+.logo-name2{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px
+}
+
+.nom-logo,
+.nom-logo-et-vous {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+.contact .mail-icon svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-top: 1px solid #ccc;
+    flex-wrap: wrap;/* Permet le retour à la ligne pour les petits écrans */
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les marges internes par défaut */
+    box-sizing: border-box; /* Assure un calcul uniforme des dimensions */
+    background-color: #fff;
+    color: #000;
+}
+
+.left-section, .center-section, .right-section {
+    flex: 1;
+    margin: 0 20px; 
+    padding-top: 96px;
+}
+
+.left-section h2, .center-section h3, .right-section .hashtag-right {
+    margin-top: 0; /* Supprime les marges supérieures */
+    display: flex;
+    align-items: center; /
+}
+
+
+.no-bullets {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.footerContact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.footerContact button {
+    padding:8px 8px ;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footerContact button:hover {
+    background-color: #f0f0f0;
+}
+.mail-icon svg, .footerContact p svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; /* Uniformise l'espacement */
+}
+.social-icons a{
+    transition: 0.2s;/* Animation de transition */
+}
+.social-icons {
+    display: flex;
+    gap: 18.4px;
+    margin-right: 26.77px;
+}
+.social-icons a:hover{
+    transform: translateY(-3px);/* Déplace l'icône vers le haut */
+    transition: 0.2s;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.hashtag-right {
+    display: flex;
+    align-items: center;
+}
+
+.hashtag-right a {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;/* Supprime le soulignement */
+}
+
+.hashtag-right a span {
+    color: red;
+}
+
+.email-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 105px;
+}
+
+.email-container input[type="email"] {
+    padding: 10px;
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+}
+
+.email-container button {
+    padding: 20px 20px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;/* Curseur de clic */
+    border-radius: 0 40px 40px 0;
+}
+
+.email-container button:hover {
+    background-color: #333;
+}
+
+.footer-bottom {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;/* Souligné au survol */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section, .center-section, .right-section {
+        flex: none; /* Les sections ne s'étendent plus automatiquement */
+        margin: 10px 0;
+    }
+}
+.logo-tagline {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 700;
+}
+.mail-icon{
+    margin-right: 15px;
+}
+#email2{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 16px
+}
+
+/* ------------------------------------------------------------------ */
+
+
+
+/* --------------------------- RESPONSIVE HEADER, TOP, MID --------------------------- */
 
 @media (max-width: 1775px) {
     #infos-slider-mid{
-        flex-direction: column;
-        width: 40%;
-        height: 13em;
-        min-width: 400px;
+        flex-direction: column !important;
+        width: 40% !important;
+        height: 13em  !important;
+        min-width: 400px !important;
     }
 
     #progress-bar-slider-mid{
-        width: 100%;
+        width: 100% !important;
     }
 
     #right-infos-slider-mid{
-        width: 80%;
+        width: 80% !important;
     }
 
-    #progress_bar_slider{ /*progress bar slider mid*/
-        width: 100%;
-        height: 0.2em;
-        background: linear-gradient(to right, white 5%, #9c9c9c 0%);
-        -webkit-border-radius: 8px;
-        -moz-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -o-border-radius: 8px;
-        border-radius: 8px;
-    }
+    #progress_bar_slider{
+        /*progressbarslidermid*/width: 100% !important;
+        height: 0.2em !important;
+        background: linear-gradient(to right, white 5%, #9c9c9c 0%) !important;
+        -webkit-border-radius: 8px !important;
+        -moz-border-radius: 8px !important;
+        -ms-border-radius: 8px !important;
+        -o-border-radius: 8px !important;
+        border-radius: 8px !important;
+}
 }
 
 /* SLIDER TOP */
 @media (max-width: 1166px) {
     #slider-top{
-        gap: 0.5em;
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -ms-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-    }
+        gap: 0.5em !important;
+        -webkit-transition: 0.5s !important;
+        -moz-transition: 0.5s !important;
+        -ms-transition: 0.5s !important;
+        -o-transition: 0.5s !important;
+        transition: 0.5s !important;
+}
 
 }
 
 /* Ordinateur */
 @media (max-width: 1074px) {
     .left-nav{
-        flex-direction: column;
-        width: 100%;
-        display: none;
+        flex-direction: column !important;
+        width: 100% !important;
+        display: none !important;
     }
 
     .main-nav{
-        flex-direction: column-reverse;
-        justify-content: center;
-        padding: 0;
-        gap: 1em;
+        flex-direction: column-reverse !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        gap: 1em !important;
     }
 
     #right-nav{
-        width: 18em;
+        width: 18em !important;
     }
 
     #nav-menu-button{
-        display: flex;
+        display: flex !important;
     }
 
     .nav{
-        align-items: center;
+        align-items: center !important;
     }
 
     #slider-content-2{
-        font-size: 18px;
-        margin-top: 4em;
-        height: 15em;
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -ms-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-    }
+        font-size: 18px !important;
+        margin-top: 4em !important;
+        height: 15em !important;
+        -webkit-transition: 0.5s !important;
+        -moz-transition: 0.5s !important;
+        -ms-transition: 0.5s !important;
+        -o-transition: 0.5s !important;
+        transition: 0.5s !important;
+}
 
     #slider-title-2{
-        font-size: 45px;
+        font-size: 45px !important;
     }
 
     #slider-top-button-2{
-        font-size: 15px;
+        font-size: 15px !important;
     }
 
 }
@@ -558,78 +1651,73 @@ div.img-slider-top{
 /* Tablette et plus grand */
 @media (max-width: 768px) {
     .illustration-mid-pane{
-        width: 18em;
+        width: 18em !important;
     }
 
     #slider-mid-container{
-        gap: 1.5em;
+        gap: 1.5em !important;
     }
 
     #socials{
-        display: none;
+        display: none !important;
     }  
 
     #slider-content-2{
-        font-size: 12px;
-        margin-top: 2em;
-        height: 11em;
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -ms-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-    }
+        font-size: 12px !important;
+        margin-top: 2em !important;
+        height: 11em !important;
+        -webkit-transition: 0.5s !important;
+        -moz-transition: 0.5s !important;
+        -ms-transition: 0.5s !important;
+        -o-transition: 0.5s !important;
+        transition: 0.5s !important;
+}
 
     #slider-title-2{
-        font-size: 25px;
+        font-size: 25px !important;
     }
 
     #slider-top-button-2{
-        margin-top: 1em;
-        font-size: 10px;
+        margin-top: 1em !important;
+        font-size: 10px !important;
     }
 
     #icon-container{
-        height: 40em;
-        gap: 1em;
+        height: 40em !important;
+        gap: 1em !important;
     }
 
     .icons{
-        width: 8em;
-        height: 8em;
-        text-align: center;
+        width: 8em !important;
+        height: 8em !important;
+        text-align: center !important;
     }
 
     .desc-icons{
-        margin-bottom: 0.5em;
+        margin-bottom: 0.5em !important;
     }
 }
   
 /* Mobiles standards (375px - 480px) */
 @media (max-width: 480px) {
     #title-slider-mid{
-        font-size: 45px;
+        font-size: 45px !important;
     }
 
     #infos-slider-mid{
-        height: 10em;
+        height: 10em !important;
     }
 }
 
-/* Petits téléphones (320px - 374px) */
-@media (max-width: 374px) {
-    
-}
-
 .show-nav{
-    display: flex;
+    display: flex !important;
 }
 
 .show-animation-nav{
-    height: 20em;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    height: 20em !important;
+    -webkit-transition: 0.3s !important;
+    -moz-transition: 0.3s !important;
+    -ms-transition: 0.3s !important;
+    -o-transition: 0.3s !important;
+    transition: 0.3s !important;
 }
